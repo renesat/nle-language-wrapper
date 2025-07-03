@@ -3,4 +3,4 @@
 	url = https://github.com/pybind/pybind11
 [submodule "nle"]
 	path = nle
-	url = https://github.com/facebookresearch/nle.git
+	url = https://github.com/NetHack-LE/nle.git
