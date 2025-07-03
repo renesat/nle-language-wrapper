@@ -51,11 +51,6 @@ class CMakeBuild(build_ext.build_ext):
 
 packages = [
     "nle_language_wrapper",
-    "nle_language_wrapper.agents",
-    "nle_language_wrapper.agents.sample_factory",
-    "nle_language_wrapper.scripts",
-    "nle_language_wrapper.tests",
-    "nle_language_wrapper.wrappers",
 ]
 
 extras_deps = {
@@ -70,12 +65,6 @@ extras_deps = {
         "isort>=5.10.1",
         "numpy>=1.21.0",
     ],
-    "agent": [
-        "sample_factory>=1.121.4",
-        "transformers>=4.17.0",
-        "torch@https://download.pytorch.org/whl/cu111/"
-        "torch-1.9.1%2Bcu111-cp39-cp39-linux_x86_64.whl",
-    ],
 }
 
 if __name__ == "__main__":
@@ -87,7 +76,7 @@ if __name__ == "__main__":
 
     setuptools.setup(
         name=PACKAGE_NAME,
-        version="0.2.0",
+        version="0.2.1",
         description=("Language Wrapper for the NetHack Learning Environment (NLE) "),
         long_description=long_description,
         long_description_content_type="text/markdown",
@@ -101,10 +90,7 @@ if __name__ == "__main__":
         setup_requires=["pybind11>=2.9"],
         install_requires=[
             "pybind11>=2.9",
-            "gym>=0.15,<=0.23",
-            "nle==0.9.0",
-            "minihack==0.1.4",
-            "gym-minigrid==1.1.0",
+            "nle==1.2.0"
         ],
         tests_require=["pytest>=7.0.1"],
         extras_require=extras_deps,
